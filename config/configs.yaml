@@ -1,0 +1,176 @@
+# 模型相关的配置文件
+MODEL:
+  # 模型文件
+  WEIGHT: './weights/yolov8s/weights/best.pt'
+  # 取值 'cpu'、'0'、 '1'、 '2'、 '3'等 cpu代表以cpu进行推理，0代表使用第0块显卡进行推理
+  DEVICE: 'cpu'
+  # 阈值
+  CONF: 0.4
+  # 过滤类别
+  CLASSES: None
+  # 图片大小
+  IMGSIZE: 640
+
+# 输出配置
+OUTPUT:
+  # 输出根目录
+  base_dir: './output'
+  # 是否使用时间戳创建子目录
+  use_timestamp: true
+  # 自定义目录名 (当use_timestamp为false时使用)
+  custom_dir: 'pest_detection_results'
+  # 支持的保存格式
+  save_formats: ['txt', 'csv', 'json', 'excel']
+
+
+UI:
+  # 背景图片
+  background: './icon/background.jpg'
+  # 主图
+  zhutu2: './icon/zhutu2.png'
+  # 最上方的名称
+  title: '农作物害虫智能检测识别与大模型防控决策系统'
+  # 名称
+  label_title: '农作物害虫智能检测识别与大模型防控决策系统'
+  # 开始识别按钮背景颜色
+  start_button_bg: "48,77,49"
+  # 开始识别按钮字体颜色
+  start_button_font: "255,255,255"
+  # 导出数据按钮颜色
+  export_button_bg: "48,77,49"
+  # 导出数据按钮字体颜色
+  export_button_font: "255,255,255"
+  # 图片填充 RGB格式
+  padvalue: [ 167,200,171 ]
+  # 表格每列的宽度
+  column_widths: [ 50, 220, 120, 200, 80, 80, 140 ]
+  # 表格中字体的颜色 RGB格式
+  column_color: [ 0, 0, 0 ]
+  # 个人信息
+  label_info_txt: "作者: Stara-AI"
+  # 个人信息字体颜色 RGB 格式
+  label_info_color: "0, 0, 0"
+  # 左侧控制区域颜色 RGBA
+  label_control_color: "255,255,255, 80"
+  # 主图区域颜色
+  label_img_color: "255,255,255, 80"
+  # 表格相关
+  table_widget_info_styles:
+    # 表头背景
+    header_background_color: "48,77,49"
+    # 表头字体
+    header_color: "112,63,46"
+    # 表格背景
+    background_color: "197,190,172"
+    # 滑过背景
+    item_hover_background_color: "48,77,49"
+
+
+CONFIG:
+  # 摄像头id,如果发现打开摄像头没有画面，修改下面的数值 0 1 2 3 等
+  camera_num: 0
+  #
+  chinese_name: {
+    "rice_leaf_roller": "水稻卷叶螟",
+    "rice_leaf_caterpillar": "稻纵卷叶螟",
+    "paddy_stem_maggot": "稻茎潜蝇",
+    "asiatic_rice_borer": "亚洲玉米螟",
+    "yellow_rice_borer": "黄螟",
+    "rice_gall_midge": "稻瘿蚊",
+    "Rice_Stemfly": "水稻茎飞虱",
+    "brown_plant_hopper": "褐飞虱",
+    "white_backed_plant_hopper": "白背飞虱",
+    "small_brown_plant_hopper": "小褐飞虱",
+    "rice_water_weevil": "稻水象甲",
+    "rice_leafhopper": "稻叶蝉",
+    "grain_spreader_thrips": "谷斑蓟马",
+    "rice_shell_pest": "稻壳虫",
+    "grub": "蛴螬",
+    "mole_cricket": "蝼蛄",
+    "wireworm": "金针虫",
+    "white_margined_moth": "白边夜蛾",
+    "black_cutworm": "黑尾切叶虫",
+    "large_cutworm": "大切叶虫",
+    "yellow_cutworm": "黄切叶虫",
+    "red_spider": "红蜘蛛",
+    "corn_borer": "玉米螟",
+    "army_worm": "草地螟",
+    "aphids": "蚜虫",
+    "Potosiabre_vitarsis": "光肩星天牛",
+    "peach_borer": "桃蛀螟",
+    "english_grain_aphid": "麦长管蚜",
+    "green_bug": "绿盲蝽",
+    "bird_cherry-oataphid": "麦二叉蚜",
+    "wheat_blossom_midge": "小麦花蓟马",
+    "penthaleus_major": "麦长足螨",
+    "longlegged_spider_mite": "长腿蜘蛛螨",
+    "wheat_phloeothrips": "小麦裂管蓟马",
+    "wheat_sawfly": "小麦锯蜂",
+    "cerodonta_denticornis": "角锯潜蝇",
+    "beet_fly": "甜菜蝇",
+    "flea_beetle": "跳甲",
+    "cabbage_army_worm": "甘蓝夜蛾",
+    "beet_army_worm": "甜菜夜蛾",
+    "Beet_spot_flies": "甜菜斑蝇",
+    "meadow_moth": "草地蛾",
+    "beet_weevil": "甜菜象甲",
+    "sericaorient_alismots_chulsky": "东方萤叶甲",
+    "alfalfa_weevil": "苜蓿象甲",
+    "flax_budworm": "亚麻蕾虫",
+    "alfalfa_plant_bug": "苜蓿盲蝽",
+    "tarnished_plant_bug": "花盲蝽",
+    "Locustoidea": "蝗虫",
+    "lytta_polita": "丽缘红姬甲",
+    "legume_blister_beetle": "豆类芫菁",
+    "blister_beetle": "芫菁",
+    "therioaphis_maculata_Buckton": "斑点蚜",
+    "odontothrips_loti": "豆蓟马",
+    "Thrips": "蓟马",
+    "alfalfa_seed_chalcid": "苜蓿种子小蜂",
+    "Pieris_canidia": "菜粉蝶",
+    "Apolygus_lucorum": "绿盲蝽",
+    "Limacodidae": "斑鳞蛾科",
+    "Viteus_vitifoliae": "葡萄根瘤蚜",
+    "Colomerus_vitis": "葡萄瘿螨",
+    "Brevipoalpus_lewisi_McGregor": "刘氏短角螨",
+    "oides_decempunctata": "十星叶甲",
+    "Polyphagotars_onemus_latus": "宽翅粉虱",
+    "Pseudococcus_comstocki_Kuwana": "康氏粉蚧",
+    "parathrene_regalis": "皇家长尾蛾",
+    "Ampelophaga": "葡萄天蛾",
+    "Lycorma_delicatula": "斑衣蜡蝉",
+    "Xylotrechus": "枯叶甲",
+    "Cicadella_viridis": "绿蝉",
+    "Miridae": "盲蝽科",
+    "Trialeurodes_vaporariorum": "温室白粉虱",
+    "Erythroneura_apicalis": "顶端红斑叶蝉",
+    "Papilio_xuthus": "柑橘凤蝶",
+    "Panonchus_citri_McGregor": "柑橘全爪螨",
+    "Phyllocoptes_oleiverus_ashmead": "橄榄瘿螨",
+    "Icerya_purchasi_Maskell": "吹绵介壳虫",
+    "Unaspis_yanonensis": "薛氏介壳虫",
+    "Ceroplastes_rubens": "红蜡介壳虫",
+    "Chrysomphalus_aonidum": "圆盾蚧",
+    "Parlatoria_zizyphus_Lucus": "枣圆盾蚧",
+    "Nipaecoccus_vastalor": "葡萄粉蚧",
+    "Aleurocanthus_spiniferus": "柑橘粉虱",
+    "Tetradacus_c_Bactrocera_minax": "大实蝇",
+    "Dacus_dorsalis(Hendel)": "东方果实蝇",
+    "Bactrocera_tsuneonis": "桔小实蝇",
+    "Prodenia_litura": "斜纹夜蛾",
+    "Adristyrannus": "金带夜蛾",
+    "Phyllocnistis_citrella_Stainton": "柑橘潜叶蛾",
+    "Toxoptera_citricidus": "柑橘黑蚜",
+    "Toxoptera_aurantii": "柑橘蚜",
+    "Aphis_citricola_Vander_Goot": "柑橘棉蚜",
+    "Scirtothrips_dorsalis_Hood": "花蓟马",
+    "Dasineura_sp": "瘿蚊属",
+    "Lawana_imitata_Melichar": "拟卷叶蝉",
+    "Salurnis_marginella_Guerr": "小缘天牛",
+    "Deporaus_marginatus_Pascoe": "边缘象鼻虫",
+    "Chlumetia_transversa": "柑橘夜蛾",
+    "Mango_flat_beak_leafhopper": "芒果扁喙叶蝉",
+    "Rhytidodera_bowrinii_white": "皱头天牛",
+    "Sternochetus_frigidus": "坚果象甲",
+    "Cicadellidae": "叶蝉科",
+    '无目标': '无目标' }

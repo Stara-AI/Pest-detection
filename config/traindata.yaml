@@ -1,0 +1,124 @@
+# Ultralytics YOLO 🚀, AGPL-3.0 license
+# PASCAL VOC dataset http://host.robots.ox.ac.uk/pascal/VOC by University of Oxford
+# Example usage: yolo train data=VOC.yaml
+# parent
+# ├── ultralytics
+# └── datasets
+#     └── VOC  ← downloads here (2.8 GB)
+
+
+# Train/val/test sets as 1) dir: path/to/imgs, 2) file: path/to/imgs.txt, or 3) list: [path/to/imgs1, path/to/imgs2, ..]
+path: D:\Pest-detection\dataset
+train: # train images (relative to 'path')  16551 images
+  - train
+val: # val images (relative to 'path')  4952 images
+  - val
+test: # test images (optional)
+  - test
+
+# Classes
+names:
+  0: rice_leaf_roller
+  1: rice_leaf_caterpillar
+  2: paddy_stem_maggot
+  3: asiatic_rice_borer
+  4: yellow_rice_borer
+  5: rice_gall_midge
+  6: Rice_Stemfly
+  7: brown_plant_hopper
+  8: white_backed_plant_hopper
+  9: small_brown_plant_hopper
+  10: rice_water_weevil
+  11: rice_leafhopper
+  12: grain_spreader_thrips
+  13: rice_shell_pest
+  14: grub
+  15: mole_cricket
+  16: wireworm
+  17: white_margined_moth
+  18: black_cutworm
+  19: large_cutworm
+  20: yellow_cutworm
+  21: red_spider
+  22: corn_borer
+  23: army_worm
+  24: aphids
+  25: Potosiabre_vitarsis
+  26: peach_borer
+  27: english_grain_aphid
+  28: green_bug
+  29: bird_cherry-oataphid
+  30: wheat_blossom_midge
+  31: penthaleus_major
+  32: longlegged_spider_mite
+  33: wheat_phloeothrips
+  34: wheat_sawfly
+  35: cerodonta_denticornis
+  36: beet_fly
+  37: flea_beetle
+  38: cabbage_army_worm
+  39: beet_army_worm
+  40: Beet_spot_flies
+  41: meadow_moth
+  42: beet_weevil
+  43: sericaorient_alismots_chulsky
+  44: alfalfa_weevil
+  45: flax_budworm
+  46: alfalfa_plant_bug
+  47: tarnished_plant_bug
+  48: Locustoidea
+  49: lytta_polita
+  50: legume_blister_beetle
+  51: blister_beetle
+  52: therioaphis_maculata_Buckton
+  53: odontothrips_loti
+  54: Thrips
+  55: alfalfa_seed_chalcid
+  56: Pieris_canidia
+  57: Apolygus_lucorum
+  58: Limacodidae
+  59: Viteus_vitifoliae
+  60: Colomerus_vitis
+  61: Brevipoalpus_lewisi_McGregor
+  62: oides_decempunctata
+  63: Polyphagotars_onemus_latus
+  64: Pseudococcus_comstocki_Kuwana
+  65: parathrene_regalis
+  66: Ampelophaga
+  67: Lycorma_delicatula
+  68: Xylotrechus
+  69: Cicadella_viridis
+  70: Miridae
+  71: Trialeurodes_vaporariorum
+  72: Erythroneura_apicalis
+  73: Papilio_xuthus
+  74: Panonchus_citri_McGregor
+  75: Phyllocoptes_oleiverus_ashmead
+  76: Icerya_purchasi_Maskell
+  77: Unaspis_yanonensis
+  78: Ceroplastes_rubens
+  79: Chrysomphalus_aonidum
+  80: Parlatoria_zizyphus_Lucus
+  81: Nipaecoccus_vastalor
+  82: Aleurocanthus_spiniferus
+  83: Tetradacus_c_Bactrocera_minax
+  84: Dacus_dorsalis(Hendel)
+  85: Bactrocera_tsuneonis
+  86: Prodenia_litura
+  87: Adristyrannus
+  88: Phyllocnistis_citrella_Stainton
+  89: Toxoptera_citricidus
+  90: Toxoptera_aurantii
+  91: Aphis_citricola_Vander_Goot
+  92: Scirtothrips_dorsalis_Hood
+  93: Dasineura_sp
+  94: Lawana_imitata_Melichar
+  95: Salurnis_marginella_Guerr
+  96: Deporaus_marginatus_Pascoe
+  97: Chlumetia_transversa
+  98: Mango_flat_beak_leafhopper
+  99: Rhytidodera_bowrinii_white
+  100: Sternochetus_frigidus
+  101: Cicadellidae
+
+

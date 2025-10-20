@@ -1,0 +1,38 @@
+version: "3.9"
+
+services:
+  pest-cpu:
+    build:
+      context: ..  # build 上下文为项目根目录
+      dockerfile: ./docs/docker/Dockerfile
+    image: pest-detection:cpu
+    container_name: pest-cpu
+    environment:
+      - PYTHONUNBUFFERED=1
+      # - DISPLAY=${DISPLAY}  # 若使用X11
+    volumes:
+      - ../:/app
+      # - /tmp/.X11-unix:/tmp/.X11-unix
+    working_dir: /app
+    command: bash -lc "xvfb-run -a python main.py"
+
+  pest-gpu:
+    build:
+      context: ..  # build 上下文为项目根目录
+      dockerfile: ./docs/docker/Dockerfile.gpu
+    image: pest-detection:gpu
+    container_name: pest-gpu
+    deploy:
+      resources:
+        reservations:
+          devices:
+            - capabilities: [gpu]
+    runtime: nvidia
+    environment:
+      - PYTHONUNBUFFERED=1
+      # - DISPLAY=${DISPLAY}
+    volumes:
+      - ../:/app
+      # - /tmp/.X11-unix:/tmp/.X11-unix
+    working_dir: /app
+    command: bash -lc "xvfb-run -a python main.py" 

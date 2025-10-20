@@ -1,0 +1,37 @@
+# --- 模型权重 ---
+weights/
+*.pt
+*.pth
+*.onnx
+*.engine
+
+# --- 数据集 ---
+dataset/
+*.jpg
+*.png
+*.jpeg
+
+# --- 输出结果 ---
+output/
+runs/
+
+# --- Python 缓存与环境 ---
+__pycache__/
+*.pyc
+*.pyo
+.env
+.venv/
+venv/
+env/
+
+# --- IDE 配置 ---
+.vscode/
+.idea/
+
+# --- 日志与临时文件 ---
+*.log
+.DS_Store
+Thumbs.db
+
+# --- Docker (可选) ---
+.dockerignore
