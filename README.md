@@ -1,6 +1,4 @@
-# 农作物哨兵系统手册（用户与运维）
-
-博客：[[基于YOLOv8-SEAttention与LLMs融合的农作物害虫智能诊断与防控决策系统-CSDN博客](https://blog.csdn.net/m0_69402477/article/details/150581782?spm=1001.2014.3001.5501)](https://blog.csdn.net/m0_69402477/article/details/150581782?spm=1001.2014.3001.5501)
+# 农作物哨兵系统手册
 
 ## 0. 版本信息
 - 文档版本：v1.0
